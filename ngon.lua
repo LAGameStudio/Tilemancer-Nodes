@@ -1,3 +1,4 @@
+-- N-gone by helyx
 function init()
   setName("Ngon")
   setDesc("Generates a regular polygon")
