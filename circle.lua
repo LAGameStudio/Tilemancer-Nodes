@@ -9,7 +9,7 @@ end
  
 function apply()
  size = getTileSize()
- radius = math.floor(getValue(3,0,0,100.0)*size)
+ radius = math.floor(getValue(1,0,0,100.0)*size)
  cx = size/2
  cy = size/2
  for x = 0, size -1 do
