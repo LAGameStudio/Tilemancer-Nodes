@@ -42,7 +42,7 @@ function apply()
 	end
 -- Top of cube
 	if (x <= sizeWidth and y < sizeHeight*2-1) then
-		r,g,n = getValue(2,x,y,1)
+		r,g,b = getValue(2,x,y,1)
 		setPixel(0, s-(x/2), ((y/2)-math.ceil(x/4))-sizeHeight, r, g, b )
 	end		
     end
