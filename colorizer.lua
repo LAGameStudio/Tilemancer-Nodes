@@ -1,12 +1,12 @@
 function init()
     setName("Colorizer")
     setDesc("Colors texture")
-    setSize(108, 24+128+64+7)
+    setSize(108, 24+128)
     addOutput(24+32)
     addInput("Texture", 24+64+8+8)
-    addParameter("R",24+64+8+18+4,0,0,100)
-    addParameter("G",25+64+8+18+16+4,0,0,100)
-    addParameter("B",25+64+8+18+32+4,0,0,100)
+    addParameter("R","Red Component",24+64+18,0,0,100)
+    addParameter("G","Red Component",24+64+18+18,0,0,100)
+    addParameter("B","Red Component",24+64+18+36,0,0,100)
 end
 
 function apply()
