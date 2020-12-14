@@ -1,5 +1,6 @@
+-- by Ningow
 function init()
-    setName("MTX Rotate")
+    setName("Rotate Matrix")
     setDesc("A Rotation Matrix")
     setSize(120,18+18+18+24+64+8+8+7+4)
     addOutput(24+32)
