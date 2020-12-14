@@ -1,5 +1,6 @@
+-- by Ningow
 function init()
-    setName("Simple Rotate")
+    setName("Rotate Simply")
     setDesc("Simple 90 Rotations")
     setSize(120,18+24+64+8+8+7+4)
     addOutput(24+32)
