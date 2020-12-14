@@ -1,3 +1,4 @@
+-- Nujuju299
 function init()
     setName("Cover")
     setDesc("Overlays texture")
