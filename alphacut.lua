@@ -1,5 +1,6 @@
+-- by Ningow
 function init()
-    setName("Alpha Cut")
+    setName("Cutoff Alpha")
     setDesc("Put Transparency into stuff")
     setSize(100,18+18+24+64+8+8+7+4)
     addOutput(24+32)
