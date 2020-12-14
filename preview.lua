@@ -1,3 +1,4 @@
+-- navot's Preview
 function init()
     setName("Tiled Preview")
     setDesc("Preview in a tiled grid")
