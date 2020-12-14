@@ -14,8 +14,8 @@ function apply()
   cr = getValue(1,0,0,1)/100.0
   cg = getValue(2,0,0,1)/100.0
   cb = getValue(3,0,0,1)/100.0
-  for ( dx=0, size-1 ) do
-        for ( dy=0, size-1 ) do
+  for dx=0, size-1 do
+        for dy=0, size-1 do
             r,g,b=getValue(0,dx,dy,1)
             lum = (r+g+b)/3.0
             setPixel(0,dx,dy,lum*cr,lum*cg,lum*cb)
