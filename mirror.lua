@@ -11,22 +11,22 @@ end
 
 function apply()
   size = getTileSize()
-  v = math.floor(getValue(1,0,0,1)/100.0 * size)
-  h = math.floor(getValue(1,0,0,1)/100.0 * size)
-  for gx = 0, size - 1 do
-   for gy = 0, size - 1 do
-     if ( gx >= h ) then
-       sx = gx - h
+  v = math.floor(getValue(1,0,0,100.0) * size)
+  h = math.floor(getValue(2,0,0,100.0) * size)
+  for x = 0, size - 1 do
+   for y = 0, size - 1 do
+     if ( x >= h ) then
+       sx = x - h
      else
-       sx = -gx + h
+       sx = -x + h
      end
      if ( yx >= v ) then
-       sy = gy - v
+       sy = y - v
      else
-       sy = -gy + v
+       sy = -y + v
      end
      r,g,b=getValue(0,sx,sy,1)
-     setPixel(0,gx,gy,r,g,b)
+     setPixel(0,x,y,r,g,b)
    end
   end
 end
