@@ -28,11 +28,11 @@ function apply()
         r,g,b=getValue(3,x,y,1)
         setPixel(0,x,y, r,g,b);
     end
--- Left side of cube
+-- Top side of cube
     for i=0, tileSize*tileSize-1 do
         x = i%tileSize
         y = math.floor(i/tileSize)
-	if (x >= sizeWidth and y > tileSize-sizeDepth) then
+	if (x >= tileSize-sizeWidth and y > tileSize-sizeDepth) then
 		r,g,b = getValue(0,x,y,1)
 		s = tileSize/2 - 0.5
 		setPixel(0, s+((x-y)/2), s+math.ceil((x+y)/4)-sizeHeight, r, g, b )
@@ -48,7 +48,7 @@ function apply()
 		setPixel(0, s+(x/2), ((y/2)-math.ceil(x/4))-sizeHeight, r, g, b )
 	end
     end
--- Top of cube
+-- Left side of cube
     for i=0, tileSize*tileSize-1 do
         x = i%tileSize
         y = math.floor(i/tileSize)
