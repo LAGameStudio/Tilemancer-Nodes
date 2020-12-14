@@ -14,7 +14,7 @@ end
 
 function apply()
     tileSize = getTileSize()
-	Height = math.floor(getValue(4,0,0,1)/100*tileSize-tileSize/2)
+	Height = math.floor(getValue(4,0,0,1)/100*tileSize/2-tileSize/2)
 	Width = math.floor(getValue(5,0,0,1)/100*tileSize)
 	Depth = math.floor(getValue(6,0,0,1)/100*tileSize)
 -- Left side of cube
