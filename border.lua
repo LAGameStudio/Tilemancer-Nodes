@@ -14,7 +14,7 @@ function apply()
     thickness = math.floor(getValue(2,0,0,1)/100.0 * size)
     for x = 0, size -1 do
         for y = 0, size -1 do
-            if ( x <= thickness or y <= thickness or x >= size-thickness-1 or y >= size-thickness-1 ) then
+            if ( x <= thickness or y <= thickness or x >= size-thickness or y >= size-thickness ) then
               r, g, b = getValue(0, x, y, 100.0) -- border texture
             else
               r, g, b = getValue(1, x, y, 100.0) -- fill texture
