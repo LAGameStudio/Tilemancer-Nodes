@@ -18,15 +18,15 @@ function apply()
      if ( gx >= h ) then
        sx = gx - h
      else
-       sx = -gx
+       sx = -gx + h
      end
      if ( yx >= v ) then
        sy = gy - v
      else
-       sy = -gy
+       sy = -gy + v
      end
      r,g,b=getValue(0,sx,sy,1)
-     setPixel(0,gx,gy, r,g,1.0)
+     setPixel(0,gx,gy,r,g,b)
    end
   end
 end
