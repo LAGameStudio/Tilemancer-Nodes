@@ -1,5 +1,6 @@
+-- navot's faster scatter
 function init()
-    setName("Custom Scatter")
+    setName("Faster Scatter")
     setDesc("Scatters texture")
     setSize(100, 24+64+8+8+18*7+7+4)
     addOutput(24+32)
