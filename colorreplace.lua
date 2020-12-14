@@ -33,7 +33,13 @@ function apply()
      setPixel(0,x,y,r,g,b)
     end
    else
-    if ( (r > r1-fuzziness) and (r < r1+fuzziness) and (g > g1-fuzziness) and (g < g1+fuzziness) and (b < b1-fuzziness) and (b > b1+fuzziness) ) then
+    fra=r1-fuzziness
+    fga=g1-fuzziness
+    fba=b1-fuzziness
+    frb=r1+fuzziness
+    fgb=g1+fuzziness
+    fbb=b1+fuzziness
+    if ( (r >= fra) and (r =< frb) and (g >= fga) and (g <= fgb) and (b <= fba) and (b >= fbb) ) then
      setPixel(0,x,y,r2,g2,b2)
     else
      setPixel(0,x,y,r,g,b)
