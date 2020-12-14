@@ -23,7 +23,7 @@ function apply()
         y = math.floor(i/tileSize)
 	r,g,b=getValue(3,x,y,1)
 	setPixel(0,x,y, r,g,b);
-		s = (getTileSize()/2)-0.5
+		s = tileSize/2
 		outr,outg,outb = getValue(0,x,y,1)
 		if (x >= tileSize-Width and y > tileSize-Length) then
 			setPixel(0, s+((x-y)/2), s+math.ceil((x+y)/4)-Depth, outr, outg, outb )
@@ -32,7 +32,7 @@ function apply()
 	for i=0, tileSize*tileSize-1 do
         x = i%tileSize
         y = math.floor(i/tileSize)
-		s = (getTileSize()/2)-0.5
+		s = tileSize/2
 		outr,outg,outb = getValue(1,x,y,1)
 		if (x <= Length and y < Depth*2-1) then
 			setPixel(0, s+(x/2), ((y/2)-math.ceil(x/4))-Depth, outr, outg, outb )
@@ -41,7 +41,7 @@ function apply()
 	for i=0, tileSize*tileSize-1 do
         x = i%tileSize
         y = math.floor(i/tileSize)
-		s = (getTileSize()/2)-0.5
+		s = tileSize/2
 		outr,outg,outb = getValue(2,x,y,1)
 		if (x <= Width and y < Depth*2-1) then
 			setPixel(0, s-(x/2), ((y/2)-math.ceil(x/4))-Depth, outr, outg, outb )
