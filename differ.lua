@@ -1,3 +1,4 @@
+-- Toodice's dither
 function init()
   setName("Differ")
   setDesc("A poor man's edge detection")
