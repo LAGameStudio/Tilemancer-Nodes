@@ -21,30 +21,41 @@ function apply()
   sizeWidth = Width*tileSize
   Depth  = getValue(6,0,0,1)/100
   sizeDepth = Depth*tileSize
+-- Fill background
     for i=0, tileSize*tileSize-1 do
         x = i%tileSize
         y = math.floor(i/tileSize)
---	rx = x / tileSize
---	ry = y / tileSize
+        r,g,b=getValue(3,x,y,1)
+        setPixel(0,x,y, r,g,b);
+    end
+-- Left side of cube
+    for i=0, tileSize*tileSize-1 do
+        x = i%tileSize
+        y = math.floor(i/tileSize)
 	if (x >= sizeWidth and y > tileSize-sizeDepth) then
-			-- Left side of cube
 		r,g,b = getValue(0,x,y,1)
 		s = tileSize/2 - 0.5
 		setPixel(0, s+((x-y)/2), s+math.ceil((x+y)/4)-sizeHeight, r, g, b )
-	elseif (x <= sizeDepth and y < sizeHeight*2-1) then
-			-- Right side of cube
+	end
+    end
+-- Right side of cube
+    for i=0, tileSize*tileSize-1 do
+        x = i%tileSize
+        y = math.floor(i/tileSize)
+	if (x <= sizeDepth and y < sizeHeight*2-1) then
 		r,g,b = getValue(1,x,y,1)
 		s = tileSize/2 - 0.5
 		setPixel(0, s+(x/2), ((y/2)-math.ceil(x/4))-sizeHeight, r, g, b )
-	elseif (x <= sizeWidth and y < sizeHeight*2-1) then
-			-- Top of cube
+	end
+    end
+-- Top of cube
+    for i=0, tileSize*tileSize-1 do
+        x = i%tileSize
+        y = math.floor(i/tileSize)
+	if (x <= sizeWidth and y < sizeHeight*2-1) then
 		r,g,b = getValue(2,x,y,1)
 		s = tileSize/2 - 0.5
 		setPixel(0, s-(x/2), ((y/2)-math.ceil(x/4))-sizeHeight, r, g, b )
-	else
-			-- Fill background
-		r,g,b=getValue(3,x,y,1)
-		setPixel(0,x,y, r,g,b);
 	end
     end
 end
