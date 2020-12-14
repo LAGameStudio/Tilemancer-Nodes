@@ -2,11 +2,11 @@
 function init()
     setName("Circles")
     setDesc("Generates Circles")
-    setSize(108, 24+64+8)
+    setSize(108, 24+64+64+8)
     addOutput(24+32)
-    addInputParameter("X Interval", "How often X", 24+16, 16, 1, 100)
-    addInputParameter("Y Interval", "How often Y", 24+32, 16, 1, 100)
-    addInputParameter("Radius", "How big", 24+48, 1, 1, 100)
+    addInputParameter("X Interval", "How often X", 24+64+16, 16, 1, 100)
+    addInputParameter("Y Interval", "How often Y", 24+64+32, 16, 1, 100)
+    addInputParameter("Radius", "How big", 24+64+48, 1, 1, 100)
 end
  
 function apply()
