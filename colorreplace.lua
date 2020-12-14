@@ -27,7 +27,7 @@ function apply()
   for y = 0, size -1 do
    r,g,b=getValue(0,x,y,1)
    if ( fuzziness == 0 ) then
-    if (r == r1 and g == g1 and b == b1) ) then
+    if (r == r1 and g == g1 and b == b1) then
      setValue(0,x,y,r2,g2,b2)
     else
      setValue(0,x,y,r,g,b)
