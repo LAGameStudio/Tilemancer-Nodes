@@ -1,3 +1,4 @@
+-- by Ningow
 function init()
     setName("XCompose")
     setDesc("Simple 90 Rotations")
