@@ -5,8 +5,8 @@ function init()
   setSize(100,108+32)
   addOutput(24+32)
   addInput("Texture", 24+64+8)
-  addParameter("Vert","Vertical Position of Mirror Edge", 0, 0, 100, true );
-  addParameter("Horiz","Horiz Position of Mirror Edge", 0, 0, 100, true );
+  addParameter("Vert","Vertical Position of Mirror Edge", 24+64+8+16, 0, 0, 100, true );
+  addParameter("Horiz","Horiz Position of Mirror Edge", 24+64+8+32, 0, 0, 100, true );
 end
 
 function apply()
