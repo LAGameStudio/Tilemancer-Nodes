@@ -6,7 +6,7 @@ function init()
     addInput("Texture Border", 24+64+16)
     addInput("Texture Fill", 24+64+16+64+16)
     addOutput(24+32)
-    addInputParameter("Thickness", "How much border", 24+128+32+16, 1, 0, 100,true)
+    addInputParameter("Thickness", "How much border", 24+128+32+16, 25, 0, 100,true)
 end
  
 function apply()
