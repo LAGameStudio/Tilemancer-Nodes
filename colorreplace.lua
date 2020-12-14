@@ -16,7 +16,7 @@ end
  
 function apply()
  size = getTileSize()
- fuzziness = getValue(1,0,0,100)
+ fuzziness = getValue(1,0,0,100.0)
  r1 = getValue(2,0,0,100.0)
  g1 = getValue(3,0,0,100.0)
  b1 = getValue(4,0,0,100.0)
@@ -25,7 +25,7 @@ function apply()
  b2 = getValue(7,0,0,100.0)
  for x = 0, size -1 do
   for y = 0, size -1 do
-   r,g,b=getValue(0,x,y,100.0)
+   r,g,b=getValue(0,x,y,1)
    if ( fuzziness == 0 ) then
     if (r == r1 and g == g1 and b == b1) then
      setPixel(0,x,y,r2,g2,b2)
