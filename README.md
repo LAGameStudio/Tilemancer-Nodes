@@ -1,5 +1,5 @@
 # Tilemancer-Nodes
-LUA scripts for the freeware Tilemancer utility from itch.io
+Lua scripts for the freeware Tilemancer utility from itch.io
 
 * Tilemancer lives here: https://led.itch.io/tilemancer
 * Most of these scripts came from this thread: https://itch.io/t/20023/post-your-nodes-below
