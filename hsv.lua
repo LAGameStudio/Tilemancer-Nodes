@@ -1,3 +1,4 @@
+-- by Ningow
 function init()
     setName("HSV")
     setDesc("Adjust HSV values")
