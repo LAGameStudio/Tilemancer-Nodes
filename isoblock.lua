@@ -6,6 +6,7 @@ function init()
 	addInput("z",24+8+8+8)
 	addInput("x",24+8+8+8+8)
 	addInput("y",24+8+8+8+8+8)
+	addInput("fi",24+8+8+8+8+8+8)
     addParameter("Depth", "Depth of the block", 24+64+8+8, 0, 0, (getTileSize()/2)-1)
     addParameter("Width", "Width of the block", 24+64+8+8+18, getTileSize(), 0, getTileSize())
     addParameter("Length", "Length of the block", 24+64+8+8+18+18, getTileSize(), 0, getTileSize())
@@ -13,9 +14,9 @@ end
 
 function apply()
     tileSize = getTileSize()
-	Depth = getValue(3,0,0,1)
-	Width = getValue(4,0,0,1)
-	Length = getValue(5,0,0,1)
+	Depth = getValue(4,0,0,1)
+	Width = getValue(5,0,0,1)
+	Length = getValue(6,0,0,1)
 	
     for i=0, tileSize*tileSize-1 do
         x = i%tileSize
@@ -43,6 +44,8 @@ function apply()
 		if (x <= Width and y < Depth*2-1) then
 			setPixel(0, s-(x/2), ((y/2)-math.ceil(x/4))-Depth, outr, outg, outb )
 		end
+	r,g,b=getValue(3,x,y,1)
+	setPixel(0,x,y, r,g,b);
     end
 	
 end
