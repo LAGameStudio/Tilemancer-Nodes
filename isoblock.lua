@@ -7,16 +7,16 @@ function init()
 	addInput("x",24+8+8+8+8)
 	addInput("y",24+8+8+8+8+8)
 	addInput("fi",24+8+8+8+8+8+8)
-    addParameter("Depth", "Depth of the block", 24+64+8+8, 0, 0, (getTileSize()/2)-1)
-    addParameter("Width", "Width of the block", 24+64+8+8+18, getTileSize(), 0, getTileSize())
-    addParameter("Length", "Length of the block", 24+64+8+8+18+18, getTileSize(), 0, getTileSize())
+    addParameter("Depth", "Depth of the block", 24+64+8+8, 0, 0, 100)
+    addParameter("Width", "Width of the block", 24+64+8+8+18, getTileSize(), 0, 100)
+    addParameter("Length", "Length of the block", 24+64+8+8+18+18, getTileSize(), 0, 100)
 end
 
 function apply()
     tileSize = getTileSize()
-	Depth = getValue(4,0,0,1)
-	Width = getValue(5,0,0,1)
-	Length = getValue(6,0,0,1)
+	Depth = math.floor((getValue(4,0,0,1)/2-1)/100*tileSize)
+	Width = math.floor(getValue(5,0,0,1)/100*tileSize)
+	Length = math.floor(getValue(6,0,0,1)/100*tileSize)
 	
     for i=0, tileSize*tileSize-1 do
         x = i%tileSize
