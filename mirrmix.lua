@@ -1,3 +1,4 @@
+-- Ningow
 function init()
     setName("MirrMix")
     setDesc("Mix with the mirror image")
