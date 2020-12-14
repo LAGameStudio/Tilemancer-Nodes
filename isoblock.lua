@@ -1,3 +1,4 @@
+-- improved by LostAstronaut.com
 function init()
     setName("IsoBlock")
     setDesc("Isometric Block Simulation")
@@ -13,17 +14,19 @@ function init()
 end
 
 function apply()
-    tileSize = getTileSize()
-	Height = math.floor(getValue(4,0,0,1)/100*tileSize/2-tileSize/2)
-	Width = math.floor(getValue(5,0,0,1)/100*tileSize)
-	Depth = math.floor(getValue(6,0,0,1)/100*tileSize)
+  tileSize = getTileSize()
+  Height = (getValue(4,0,0,1)/100)/2-1
+  Width  = (getValue(5,0,0,1)/100)
+  Depth  = (getValue(6,0,0,1)/100)
 -- Left side of cube
     for i=0, tileSize*tileSize-1 do
         x = i%tileSize
         y = math.floor(i/tileSize)
+	rx = x / tileSize
+	ry = y / tileSize
 	r,g,b=getValue(3,x,y,1)
 	setPixel(0,x,y, r,g,b);
-	if (x >= tileSize-Width and y >= tileSize-Depth) then
+	if (rx >= -Width and ry >= -Depth) then
 		s = tileSize/2
 		outr,outg,outb = getValue(0,x,y,1)
 		setPixel(0, s+((x-y)/2), s+math.ceil((x+y)/4)-Height, outr, outg, outb )
@@ -33,7 +36,9 @@ function apply()
     for i=0, tileSize*tileSize-1 do
         x = i%tileSize
         y = math.floor(i/tileSize)
-	if (x <= Depth and y <= Height*2) then
+	rx = x / tileSize
+	ry = y / tileSize
+	if (rx <= Depth and ry <= Height*2) then
 		s = tileSize/2
 		outr,outg,outb = getValue(1,x,y,1)
 		setPixel(0, s+(x/2), ((y/2)-math.ceil(x/4))-Height, outr, outg, outb )
@@ -43,7 +48,9 @@ function apply()
     for i=0, tileSize*tileSize-1 do
         x = i%tileSize
         y = math.floor(i/tileSize)
-	if (x <= Width and y <= Height*2) then
+	rx = x / tileSize
+	ry = y / tileSize
+	if (rx <= Width and ry <= Height*2) then
 		s = tileSize/2
 		outr,outg,outb = getValue(2,x,y,1)
 		setPixel(0, s-(x/2), ((y/2)-math.ceil(x/4))-Height, outr, outg, outb )
