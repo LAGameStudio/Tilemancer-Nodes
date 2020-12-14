@@ -20,7 +20,7 @@ function apply()
      else
        sx = -x + h
      end
-     if ( yx >= v ) then
+     if ( y >= v ) then
        sy = y - v
      else
        sy = -y + v
