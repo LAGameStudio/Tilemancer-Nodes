@@ -1,6 +1,6 @@
 -- lostastronaut.com submits free node for Tilemancer
 function init()
-  setName("XY-Cutoff")
+  setName("Cutoff XY")
   setDesc("Trims")
   setSize(100,108+96)
   addOutput(24+32)
