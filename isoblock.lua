@@ -8,8 +8,8 @@ function init()
 	addInput("y",24+8+8+8+8+8)
 	addInput("fi",24+8+8+8+8+8+8)
     addParameter("Depth", "Depth of the block", 24+64+8+8, 0, 0, 100)
-    addParameter("Width", "Width of the block", 24+64+8+8+18, getTileSize(), 0, 100)
-    addParameter("Length", "Length of the block", 24+64+8+8+18+18, getTileSize(), 0, 100)
+    addParameter("Width", "Width of the block", 24+64+8+8+18, 100, 0, 100)
+    addParameter("Length", "Length of the block", 24+64+8+8+18+18, 100, 0, 100)
 end
 
 function apply()
