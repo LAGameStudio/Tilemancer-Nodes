@@ -1,3 +1,4 @@
+-- by Ningow
 function init()
     setName("CrossCut")
     setDesc("Bend texture into a shape")
