@@ -15,11 +15,11 @@ end
 
 function apply()
   tileSize = getTileSize()
-  Height = (getValue(4,0,0,1)/100)/2-1
-  sizeHeight = Height*tileSize
-  Width  = (getValue(5,0,0,1)/100)
+  Height = getValue(4,0,0,1)/100)
+  sizeHeight = Height*(tileSize/2-1)
+  Width  = getValue(5,0,0,1)/100
   sizeWidth = Width*tileSize
-  Depth  = (getValue(6,0,0,1)/100)
+  Depth  = getValue(6,0,0,1)/100
   sizeDepth = Depth*tileSize
     for i=0, tileSize*tileSize-1 do
         x = i%tileSize
