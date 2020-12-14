@@ -15,7 +15,7 @@ end
 
 function apply()
   tileSize = getTileSize()
-  Height = getValue(4,0,0,1)/100)
+  Height = getValue(4,0,0,1)/100
   sizeHeight = Height*(tileSize/2-1)
   Width  = getValue(5,0,0,1)/100
   sizeWidth = Width*tileSize
@@ -24,8 +24,8 @@ function apply()
     for i=0, tileSize*tileSize-1 do
         x = i%tileSize
         y = math.floor(i/tileSize)
-	rx = x / tileSize
-	ry = y / tileSize
+--	rx = x / tileSize
+--	ry = y / tileSize
 -- Fill background
 	r,g,b=getValue(3,x,y,1)
 	setPixel(0,x,y, r,g,b);
