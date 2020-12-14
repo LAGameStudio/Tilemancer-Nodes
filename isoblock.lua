@@ -14,7 +14,7 @@ end
 
 function apply()
     tileSize = getTileSize()
-	Depth = math.floor(getValue(4,0,0,1)/50*tileSize)
+	Depth = math.floor(getValue(4,0,0,1)/200*tileSize)
 	Width = math.floor(getValue(5,0,0,1)/100*tileSize)
 	Length = math.floor(getValue(6,0,0,1)/100*tileSize)
 	
