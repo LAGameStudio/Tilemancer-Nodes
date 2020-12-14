@@ -4,9 +4,9 @@ function init()
     setSize(108, 24+128)
     addOutput(24+32)
     addInput("Texture", 24+64+8+8)
-    addParameter("R","Red Component",24+64+18,0,0,100)
-    addParameter("G","Red Component",24+64+18+18,0,0,100)
-    addParameter("B","Red Component",24+64+18+36,0,0,100)
+    addParameter("R","Red Component",24+64+18+18,0,0,100)
+    addParameter("G","Red Component",24+64+36+18,0,0,100)
+    addParameter("B","Red Component",24+64+36+36,0,0,100)
 end
 
 function apply()
