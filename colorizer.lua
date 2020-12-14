@@ -18,7 +18,7 @@ function apply()
         for ( dy=0, size-1 ) do
             r,g,b=getValue(0,dx,dy,1)
             lum = (r+g+b)/3.0
-            setPixel(0,dx,dy,lum*cr,lum*cg,lum*cb);
+            setPixel(0,dx,dy,lum*cr,lum*cg,lum*cb)
         end
   end
 end
