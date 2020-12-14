@@ -4,7 +4,7 @@ function init()
     setDesc("Generates a Circle")
     setSize(108, 24+64+16+16+8)
     addOutput(24+32)
-    addInputParameter("Radius", "How big", 24+64+16, 50, 1, 100)
+    addInputParameter("Radius", "How big", 24+64+16, 50, 1, 100,true)
 end
  
 function apply()
