@@ -16,7 +16,7 @@ end
  
 function apply()
  size = getTileSize()
- fuzziness = getValue(1,0,0,1)
+ fuzziness = getValue(1,0,0,100)
  r1 = getValue(2,0,0,100.0)
  g1 = getValue(3,0,0,100.0)
  b1 = getValue(4,0,0,100.0)
@@ -28,15 +28,15 @@ function apply()
    r,g,b=getValue(0,x,y,100.0)
    if ( fuzziness == 0 ) then
     if (r == r1 and g == g1 and b == b1) then
-     setValue(0,x,y,r2,g2,b2)
+     setPixel(0,x,y,r2,g2,b2)
     else
-     setValue(0,x,y,r,g,b)
+     setPixel(0,x,y,r,g,b)
     end
    else
-    if ( r > r1-fuzziness and r < r1+fuzziness and g > g1-fuzziness and g < g1+fuzziness and b < b1-fuzziness and b > b1+fuzziness ) then
-     setValue(0,x,y,r2,g2,b2)
+    if ( (r > r1-fuzziness) and (r < r1+fuzziness) and (g > g1-fuzziness) and (g < g1+fuzziness) and (b < b1-fuzziness) and (b > b1+fuzziness) ) then
+     setPixel(0,x,y,r2,g2,b2)
     else
-     setValue(0,x,y,r,g,b)
+     setPixel(0,x,y,r,g,b)
     end
    end
   end
