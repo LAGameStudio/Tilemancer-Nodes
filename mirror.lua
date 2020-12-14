@@ -11,8 +11,8 @@ end
 
 function apply()
   size = getTileSize()
-  v = getValue(1,0,0,1)/100.0
-  h = getValue(1,0,0,1)/100.0
+  v = math.floor(getValue(1,0,0,1)/100.0 * size)
+  h = math.floor(getValue(1,0,0,1)/100.0 * size)
   for gx = 0, size - 1 do
    for gy = 0, size - 1 do
      if ( gx >= h ) then
