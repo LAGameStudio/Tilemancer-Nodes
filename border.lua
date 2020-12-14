@@ -2,7 +2,7 @@
 function init()
     setName("Border")
     setDesc("Creates a square border from a texture on a texture")
-    setSize(108, 24+64+8+8+18+7+4)
+    setSize(108, 24+128+64+8)
     addInput("Texture Border", 24+64+16)
     addInput("Texture Fill", 24+64+16+64+16)
     addOutput(24+32)
