@@ -7,3 +7,4 @@ Lua scripts for the freeware Tilemancer utility from itch.io
 
 Once you create a new node, please contribute it here for everyone by creating a Pull Request!
 
+To use this code, copy files to your Tilemancer-0.2.1/Nodes/ folder
