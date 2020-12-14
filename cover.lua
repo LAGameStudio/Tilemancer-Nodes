@@ -1,6 +1,6 @@
 -- Nujuju299
 function init()
-    setName("Cover")
+    setName("Overlay Cover")
     setDesc("Overlays texture")
     setSize(80, 148)
     addOutput(56)
