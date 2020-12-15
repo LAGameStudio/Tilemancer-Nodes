@@ -39,7 +39,7 @@ function apply()
     fgb=g1 + fuzziness
     fba=b1 - fuzziness
     fbb=b1 + fuzziness
-    if ( (r >= fra) and (r <= frb) and (g >= fga) and (g <= fgb) and (b <= fba) and (b >= fbb) ) then
+    if ( (r >= fra) and (r <= frb) and (g >= fga) and (g <= fgb) and (b >= fba) and (b <= fbb) ) then
      setPixel(0,x,y,r2,g2,b2)
     else
      setPixel(0,x,y,r,g,b)
